@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="assets\css\custom.css">
+  </head>
+  <body>
+    <div class="main_tile"align="center" id="MT">
+    <div class="main_tile_01" align="center" id="MT1">
+          <h1><b>Add Your Company details</b><h1>
+    </div>
+    <div class="main_tile_02" id="MT2">
+      <h6>Kindly Fill the Below form<h6><br>
+    </div>
+    </div>
+
+
+      <form class="page" id="f1" action="/companyverfication"  method="post">
+        <div class="row">
+        <div class="col25">
+        <label for="logo"><h3>Upload Company Logo</h3></label><br>
+        </div>
+        <div class="col75">
+        <input type="file" name="logo" id="logo" required>
+        </div>
+        </div>
+
+
+        <div class="row">
+        <div class="col25">
+        <label for="company_name"><h3>Company Name</h3></label>
+        </div>
+        <div class="col75">
+        <input type="text" name="company_name" id="company_name" required><br>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col25">
+        <label for="job_title"><h3>Job Title</h3></label>
+        </div>
+        <div class="col75">
+        <input type="text" name="job_title" id="job_title" required><br>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col25">
+        <label for="experience"><h3>Experience</h3></label>
+        </div>
+        <div class="col75">
+        <input type="text" name="experience" id="experience" required><br><br>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col25">
+         <div class="tickbox">
+        <label for="agree"></label>
+        <input type="checkbox" name="agree" required >
+        </div>
+        </div>
+        <div class="tickcontent">
+        <h3> I Agree to the <a href="#"><b>services and conditions</b></a></h3>
+        </div>
+        </div>
+
+
+        <label for="submit"><h3></h3></label>
+        <input type="submit" name="submit" value="submit" ></input>
+
+        <label for="reset"><h3></h3></label>
+        <input type="reset" name="reset" value="Reset" >
+
+      </form>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="assets\css\custom.css">
+  </head>
+
+
+  <script>
+   function validate(){
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  if ( username == "" && password == "")
+  {
+  alert ("You have left blank");
+  return false;
+  }
+
+  if ( username == "admin" && password == "admin")
+  {
+  alert ("login Successful");
+  return true;
+  }
+  else{
+  alert("Please enter correct username and password");
+  return false;
+  }
+  }
+</script>
+
+  <body>
+<br>
+<br>
+<br>
+  <form class="form_page_02" id="f1" onsubmit="return validate()" action="\thanks" method="post">
+
+        <div class="row">
+        <div class="col25">
+        <label for="username"><h3>usernmame</h3></label>
+        </div>
+        <div class="col75">
+        <input type="text" name="username" id="username" ><br>
+        </div>
+        </div>
+
+
+        <div class="row">
+        <div class="col25">
+        <label for="password"><h3>password</h3></label>
+        </div>
+        <div class="col75">
+        <input type="text" name="password" id="password" ><br>
+        </div>
+        </div>
+
+        <label for="submit"></label>
+        <input type="submit" name="submit" value="submit"  ></input>
+
+        <label for="reset"></label>
+        <input type="reset" name="reset" value="Reset" >
+        <br><br><br>
+        <a href="Personalverfication" ><b> Sign Up for new account</b></a>
+
+      </form>
+  </body>
+
+</html>
