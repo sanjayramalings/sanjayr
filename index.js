@@ -1,11 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-var PouchDB = require('pouchdb');
-var db = new PouchDB("database");
-
-
-db.allDocs({include_docs: true});
+var PORT=process.env.PORT || 3000;
 
 const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -58,6 +54,6 @@ app.post('/emailverfication',urlencodedParser,function(req,res){
   console.log(req.body);
 });
 
-app.listen(3003);
+app.listen(PORT);
 
 console.log('Running at Port ');
