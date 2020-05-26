@@ -4,6 +4,15 @@
     <meta charset="utf-8">
     <title>Registration Form</title>
     <link rel="stylesheet" href="assets\css\custom.css">
+    <script type="text/javascript">
+    function validate(){
+      var inputmail = document.getElementById("email").value;
+      localStorage.setItem("mail",JSON.stringify(inputmail));
+    console.log("sucess3");
+    return true;
+    }
+    </script>
+
   </head>
   <body>
     <div class="main_tile"align="center" id="MT">
@@ -15,7 +24,7 @@
     </div>
     </div>
 
-      <form class="page" id="f1" action="/emailverfication"  method="post">
+      <form class="page" id="f1" action="/emailverfication" onsubmit="return validate()" method="post">
 
         <div class="row">
         <div class="col25">

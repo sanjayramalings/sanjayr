@@ -4,6 +4,19 @@
     <meta charset="utf-8">
     <title>Registration Form</title>
     <link rel="stylesheet" href="assets\css\custom.css">
+    <script type="text/javascript">
+    function validate(){
+      var  company_name = document.getElementById("company_name").value;
+      var job_title = document.getElementById("job_title").value;
+      var experience = document.getElementById("experience").value;
+      localStorage.setItem("company_name",JSON.stringify(company_name));
+      localStorage.setItem("job_title",JSON.stringify(job_title));
+      localStorage.setItem("experience",JSON.stringify(experience));
+    console.log("add sucess2");
+    return true;
+    }
+    </script>
+
   </head>
   <body>
     <div class="main_tile"align="center" id="MT">
@@ -16,7 +29,7 @@
     </div>
 
 
-      <form class="page" id="f1" action="/companyverfication"  method="post">
+      <form class="page" id="f1" action="/companyverfication" onsubmit="return validate()"  method="post">
         <div class="row">
         <div class="col25">
         <label for="logo"><h3>Upload Company Logo</h3></label><br>
