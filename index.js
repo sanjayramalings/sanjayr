@@ -15,28 +15,16 @@ app.set('view engine','ejs');
    res.render('signin');
  });
 
-
-
 app.post('/thanks',urlencodedParser,function(req,res){
-  var object=JSON.stringify(req.body);
-  var doc={
-    object
-  }
-  db.post(doc).then(function (response) {
-   console.log("true");
- }).catch(function (err) {
-   console.log("err");
- });
   res.render('thankyou');
   console.log(req.body);
+
 });
-
-
 
 app.get('/Personalverfication',function(req,res){
-res.render('page1');
-
+  res.render('page1');
 });
+
 
 
 app.post('/Personalverfication',urlencodedParser,function(req,res){
@@ -47,12 +35,16 @@ app.post('/Personalverfication',urlencodedParser,function(req,res){
 
 app.post('/companyverfication',urlencodedParser,function(req,res){
   res.render('page3');
+  console.log(req.body);
 });
 
 app.post('/emailverfication',urlencodedParser,function(req,res){
-  res.render('thankyou');
+  res.render('page4');
   console.log(req.body);
 });
+
+
+
 
 app.listen(PORT);
 

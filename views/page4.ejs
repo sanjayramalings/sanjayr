@@ -4,6 +4,31 @@
     <meta charset="utf-8">
     <title>Registration Form</title>
     <link rel="stylesheet" href="assets\css\custom.css">
+
+
+    <script>
+     function validate(){
+    var otp = document.getElementById("otp").value;
+
+    if ( otp == "")
+    {
+    alert ("You have left blank");
+    return false;
+    }
+
+    if ( otp == "admin")
+    {
+    alert ("verfication Successful");
+    return true;
+    }
+    else{
+    alert("Please enter correct OTP");
+    return false;
+    }
+    }
+    </script>
+
+
   </head>
   <body>
     <div class="main_tile"align="center" id="MT">
@@ -12,17 +37,21 @@
     </div>
     <div class="main_tile_02"  id="MT2">
       <h6>kindly fill the below form<h6><br>
+        <h1>check your mail for otp <h1><br>
     </div>
     </div>
 
-      <form class="page" id="f1" action="/emailverfication"  method="post">
+
+
+
+      <form class="page" id="f1" action="/thanks"  method="post">
 
         <div class="row">
         <div class="col25">
-        <label for="email"><h3>Enter your mail</h3></label>
+        <label for="otp"><h3>Enter your otp</h3></label>
         </div>
         <div class="col75">
-        <input type="email" name="email" id="email" required><br>
+        <input type="text" name="otp" id="otp" required><br>
         </div>
         </div>
 
@@ -30,7 +59,7 @@
 
 
         <label for="submit"><h3></h3></label>
-        <input type="submit" name="submit" value="submit" ></input>
+        <input type="submit" name="submit" value="submit" onclick="mailstore()" ></input>
 
         <label for="reset"><h3></h3></label>
         <input type="reset" name="reset" value="Reset" >
