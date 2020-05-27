@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-var PORT=process.env.PORT || 3000;
+var PORT=process.env.PORT || 2000;
 
 const bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
